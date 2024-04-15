@@ -1,0 +1,102 @@
+https://reintech.io/blog/php-error-handling-debugging-exception-handling
+https://www.google.com/search?q=php+debug+error+show&rlz=1C1CHBD_enIN1067IN1067&oq=php+debug+error+&gs_lcrp=EgZjaHJvbWUqBggBECMYJzIKCAAQRRgWGB4YOTIGCAEQIxgnMgcIAhAAGIAEMggIAxAAGBYYHjIKCAQQABgPGBYYHjIICAUQABgWGB4yCAgGEAAYFhgeMggIBxAAGBYYHjIICAgQABgWGB4yCAgJEAAYFhge0gEJMTE2OTJqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#ip=1
+https://www.php.net/manual/en/outcontrol.configuration.php#ini.output-buffering
+https://www.php.net/manual/en/language.types.integer.php
+PHP Error Handling: Debugging and Exception Handling
+In this tutorial, we will explore PHP error handling, debugging, and exception handling techniques. These techniques are essential for any software developer to create robust and error-free applications. By the end of this guide, you will have a strong understanding of PHP error handling and be able to use it in your projects.
+
+For those who want to hire PHP developers, you can find a pool of talented programmers at Reintech.
+
+Table of Contents
+Understanding PHP Errors
+PHP Error Reporting
+PHP Debugging Techniques
+PHP Exception Handling
+Conclusion
+1. Understanding PHP Errors
+PHP errors can be categorized into four types:
+
+Parse Errors: These errors occur when there is a syntax mistake in the code.
+Warning Errors: These errors occur when the script encounters a non-fatal error, allowing the script to continue execution.
+Notice Errors: These errors occur when the script encounters a minor issue that can be safely ignored but could lead to problems in certain situations.
+Deprecated Errors: These errors occur when the script uses a function or feature that has been deprecated and will be removed in future versions of PHP.
+2. PHP Error Reporting
+PHP has built-in error reporting functions that can be used to display or log errors. The two main functions are error_reporting() and ini_set().
+
+Use the error_reporting() function to set the error reporting level:
+
+
+error_reporting(E_ALL); // Show all errors
+error_reporting(E_ERROR | E_WARNING | E_PARSE); // Show only errors, warnings, and parse errors
+error_reporting(E_ALL & ~E_NOTICE); // Show all errors, except for notices
+PHP
+Use the ini_set() function to configure PHP's error handling settings:
+
+
+ini_set('display_errors', 1); // Display errors on the screen
+ini_set('log_errors', 1); // Log errors to a file
+ini_set('error_log', '/path/to/error.log'); // Set the path to the error log file
+PHP
+3. PHP Debugging Techniques
+There are several techniques for debugging PHP code:
+
+3.1. Displaying Errors
+Use the ini_set() function to display errors on the screen:
+
+
+ini_set('display_errors', 1);
+PHP
+3.2. Logging Errors
+Use the ini_set() function to log errors to a file:
+
+
+ini_set('log_errors', 1);
+ini_set('error_log', '/path/to/error.log');
+PHP
+3.3. Using var_dump() and print_r()
+Use the var_dump() and print_r() functions to inspect the values of variables:
+
+
+$variable = "Hello, world!";
+var_dump($variable);
+print_r($variable);
+PHP
+3.4. Using Debuggers
+Use a debugger, such as Xdebug or Zend Debugger, to step through code and inspect variables:
+
+
+# Install Xdebug using PECL
+pecl install xdebug
+Shell
+Configure Xdebug in your php.ini file:
+
+
+zend_extension="path/to/xdebug.so"
+xdebug.remote_enable=1
+xdebug.remote_host="localhost"
+xdebug.remote_port=9000
+Shell
+4. PHP Exception Handling
+PHP exception handling allows developers to handle errors in a more elegant way by using the try, catch, and finally blocks.
+
+Here's an example:
+
+
+function divide($numerator, $denominator) {
+    if ($denominator == 0) {
+        throw new Exception("Division by zero is not allowed.");
+    }
+    return $numerator / $denominator;
+}
+
+try {
+    echo divide(10, 0);
+} catch (Exception $e) {
+    echo "Caught exception: " . $e->getMessage();
+} finally {
+    echo "This block will always be executed.";
+}
+PHP
+5. Conclusion
+In this tutorial, we covered PHP error handling, debugging, and exception handling techniques. By using these techniques, you can create more robust and error-free applications. Remember to hire PHP developers with a strong understanding of these techniques to ensure the success of your projects.
+
